@@ -1,0 +1,77 @@
+Google Cloud Console Setup Guide
+
+This guide will walk you through setting up Google Cloud Console for the Meet Transcript Downloader.
+
+1. Create Google Cloud Project
+
+1.1 Access Google Cloud Console
+- Go to Google Cloud Console (https://console.cloud.google.com/)
+- IMPORTANT: Log in with the same Google account you want to use for accessing data
+
+1.2 Create New Project
+- Click "Select a project" at the top
+- Click "New Project"
+- Enter project name: Meet Transcript Downloader
+- Click "Create"
+
+2. Enable Required APIs
+
+2.1 Access API Library
+- In the Google Cloud Console, go to "APIs & Services" > "Library"
+
+2.2 Enable Google Calendar API
+- Search: "Google Calendar API"
+- Click on it and press "Enable"
+
+2.3 Enable Google Drive API
+- Search: "Google Drive API"
+- Click on it and press "Enable"
+
+3. Configure OAuth Consent Screen
+
+3.1 Access OAuth Consent Screen
+- Go to "APIs & Services" > "OAuth consent screen"
+
+3.2 Configure Settings
+- Choose "External" user type (unless you have Google Workspace)
+- Click "Create"
+- Fill in the required fields:
+  - App name: Meet Transcript Downloader
+  - User support email: Your email
+  - Developer contact: Your email
+- Click "Save and Continue"
+- Skip "Scopes" for now (click "Save and Continue")
+- Add your email as a test user (click "Add Users")
+- Click "Save and Continue"
+
+4. Create OAuth 2.0 Credentials
+
+4.1 Access Credentials
+- Go to "APIs & Services" > "Credentials"
+
+4.2 Create Client ID
+- Click "Create Credentials" > "OAuth 2.0 Client IDs"
+- Choose "Desktop application"
+- Name: Meet Transcript Downloader Desktop
+- Click "Create"
+- IMPORTANT: Download the JSON file
+- Copy the client_id and client_secret from the JSON file
+
+5. Configure Environment Variables
+
+5.1 Create Environment File
+- Create a .env file in your project directory
+- Add the following content:
+
+GOOGLE_CLIENT_ID=your_client_id_from_json
+GOOGLE_CLIENT_SECRET=your_client_secret_from_json
+GOOGLE_REDIRECT_URI=http://localhost:8080/callback
+
+6. Testing Your Setup
+
+1. Run the application: python main.py
+2. Complete the OAuth flow in your browser
+3. Try fetching meetings from your calendar
+4. Test downloading a transcript
+
+
