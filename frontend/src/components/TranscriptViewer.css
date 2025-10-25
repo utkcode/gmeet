@@ -1,0 +1,152 @@
+/* TranscriptViewer Component Styles */
+.transcript-viewer {
+  width: 100%;
+}
+
+.transcript-header {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.back-button {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  color: #333;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.back-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.transcript-header h2 {
+  color: #667eea;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+
+.transcript-header .meeting-date {
+  color: #888;
+  font-size: 1rem;
+}
+
+.transcript-list h3 {
+  color: #667eea;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.transcript-list p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.transcripts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.transcript-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.transcript-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.transcript-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.transcript-card-header h4 {
+  color: #667eea;
+  font-size: 1.1rem;
+  font-weight: 500;
+  flex: 1;
+}
+
+.transcript-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.transcript-card-content {
+  margin-bottom: 1rem;
+}
+
+.transcript-card-content p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.transcript-details {
+  margin-top: 1rem;
+}
+
+.modified-time {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.transcript-card-footer {
+  text-align: center;
+}
+
+.view-transcript-button {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  color: #333;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.view-transcript-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design for TranscriptViewer */
+@media (max-width: 768px) {
+  .transcripts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .transcript-card {
+    padding: 1rem;
+  }
+}
